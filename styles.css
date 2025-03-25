@@ -1,4 +1,22 @@
+/* Reset and Normalize */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+}
+
 body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
   font-family: Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
@@ -6,6 +24,33 @@ body {
   color: #333;
   margin: 0;
   padding: 0;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove default styles */
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
 h1,
@@ -19,8 +64,8 @@ h6 {
 }
 
 p {
-  text-indent: 1.5em; /* Odsadenie prvého riadku */
-  margin-bottom: 1.5em; /* Vzdialenosť medzi odsekmi */
+  text-indent: 1.5em;
+  margin-bottom: 1.5em;
 }
 
 header,
@@ -80,7 +125,6 @@ a:active {
 
 /* Pôvodné štýly s úpravami */
 nav ul {
-  list-style: none;
   padding: 0;
   display: flex;
   justify-content: center;
