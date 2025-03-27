@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./styles.css" />
+    <meta
+      name="description"
+      content="Contact information and form for reaching out to Playboi Carti's team." />
+    <title>Playboi Carti - Contact</title>
+  </head>
+  <body>
+    <header>
+      <h1>Playboi Carti</h1>
+      <nav>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="bio.html">Biography</a></li>
+          <li><a href="music.html">Music</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="contact.html" class="active">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="contact-content">
+        <h2>Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-info">
+            <h3>Get in Touch</h3>
+            <p>
+              For inquiries or fan messages, please use the contact form or reach out through our
+              official channels:
+            </p>
+            <ul class="contact-details">
+              <li>Email: <a href="mailto:contact@playboicarti.com">contact@playboicarti.com</a></li>
+              <li>Management: management@playboicarti.com</li>
+              <li>Press: press@playboicarti.com</li>
+            </ul>
+          </div>
+          <div class="contact-form">
+            <h3>Send a Message</h3>
+            <form action="#" method="POST">
+              <div class="form-group">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required />
+              </div>
+              <div class="form-group">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject:</label>
+                <select id="subject" name="subject" required>
+                  <option value="">Select a subject</option>
+                  <option value="fan">Fan Message</option>
+                  <option value="business">Business Inquiry</option>
+                  <option value="press">Press Inquiry</option>
+                  <option value="other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message:</label>
+                <textarea id="message" name="message" rows="5" required></textarea>
+              </div>
+              <button type="submit">Send Message</button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <span><small>&copy; 2025 Playboi Carti. All rights reserved.</small></span>
+    </footer>
+  </body>
+</html>
