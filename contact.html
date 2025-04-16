@@ -1,78 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <meta
       name="description"
-      content="Contact information and form for reaching out to Playboi Carti's team." />
-    <title>Playboi Carti - Contact</title>
+      content="Kontaktné informácie a formulár pre spojenie s tímom Playboi Carti." />
+    <title>Playboi Carti - Kontakt</title>
   </head>
   <body>
-    <header>
+    <a href="#main-content" class="skip-to-main-content">Preskočiť na hlavný obsah</a>
+
+    <header role="banner">
       <h1>Playboi Carti</h1>
-      <nav>
+      <nav role="navigation" aria-label="Hlavná navigácia">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="bio.html">Biography</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html" class="active">Contact</a></li>
+          <li><a href="index.html">Domov</a></li>
+          <li><a href="bio.html">Biografia</a></li>
+          <li><a href="music.html">Hudba</a></li>
+          <li><a href="gallery.html">Galéria</a></li>
+          <li><a href="contact.html" class="active" aria-current="page">Kontakt</a></li>
+          <li><a href="accessibility.html">Prístupnosť</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="contact-content">
-        <h2>Contact</h2>
+    <main id="main-content" role="main" tabindex="-1">
+      <section class="contact-content" aria-labelledby="contact-heading">
+        <h2 id="contact-heading">Kontakt</h2>
         <div class="contact-grid">
-          <div class="contact-info">
-            <h3>Get in Touch</h3>
+          <div class="contact-info" role="complementary" aria-labelledby="contact-info-heading">
+            <h3 id="contact-info-heading">Kontaktujte nás</h3>
             <p>
-              For inquiries or fan messages, please use the contact form or reach out through our
-              official channels:
+              Pre otázky alebo fanúšikovské správy použite kontaktný formulár alebo nás kontaktujte
+              cez oficiálne kanály:
             </p>
             <ul class="contact-details">
-              <li>Email: <a href="mailto:contact@playboicarti.com">contact@playboicarti.com</a></li>
-              <li>Management: management@playboicarti.com</li>
-              <li>Press: press@playboicarti.com</li>
+              <li
+                >Email:
+                <a href="mailto:contact@playboicarti.com" aria-label="Kontaktný email"
+                  >contact@playboicarti.com</a
+                ></li
+              >
+              <li
+                >Management:
+                <a href="mailto:management@playboicarti.com" aria-label="Email pre management"
+                  >management@playboicarti.com</a
+                ></li
+              >
+              <li
+                >Press:
+                <a href="mailto:press@playboicarti.com" aria-label="Email pre tlač"
+                  >press@playboicarti.com</a
+                ></li
+              >
             </ul>
           </div>
           <div class="contact-form">
-            <h3>Send a Message</h3>
-            <form action="#" method="POST">
+            <h3 id="form-heading">Poslať správu</h3>
+            <form action="#" method="POST" role="form" aria-labelledby="form-heading">
               <div class="form-group">
-                <label for="name">Name:</label>
-                <input type="text" id="name" name="name" required />
+                <label for="name">Meno:<span class="required" aria-hidden="true">*</span></label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  aria-required="true"
+                  minlength="2"
+                  aria-describedby="name-error" />
+                <span id="name-error" class="error" role="alert"></span>
               </div>
               <div class="form-group">
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required />
+                <label for="email">Email:<span class="required" aria-hidden="true">*</span></label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  aria-required="true"
+                  aria-describedby="email-error" />
+                <span id="email-error" class="error" role="alert"></span>
               </div>
               <div class="form-group">
-                <label for="subject">Subject:</label>
-                <select id="subject" name="subject" required>
-                  <option value="">Select a subject</option>
-                  <option value="fan">Fan Message</option>
-                  <option value="business">Business Inquiry</option>
-                  <option value="press">Press Inquiry</option>
-                  <option value="other">Other</option>
+                <label for="subject"
+                  >Predmet:<span class="required" aria-hidden="true">*</span></label
+                >
+                <select
+                  id="subject"
+                  name="subject"
+                  required
+                  aria-required="true"
+                  aria-describedby="subject-error">
+                  <option value="">Vyberte predmet</option>
+                  <option value="fan">Fanúšikovská správa</option>
+                  <option value="business">Obchodný dotaz</option>
+                  <option value="press">Tlačový dotaz</option>
+                  <option value="other">Iné</option>
                 </select>
+                <span id="subject-error" class="error" role="alert"></span>
               </div>
               <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="5" required></textarea>
+                <label for="message"
+                  >Správa:<span class="required" aria-hidden="true">*</span></label
+                >
+                <textarea
+                  id="message"
+                  name="message"
+                  rows="5"
+                  required
+                  aria-required="true"
+                  minlength="10"
+                  aria-describedby="message-error"></textarea>
+                <span id="message-error" class="error" role="alert"></span>
               </div>
-              <button type="submit">Send Message</button>
+              <button type="submit" aria-label="Odoslať správu">Odoslať správu</button>
             </form>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <span><small>&copy; 2025 Playboi Carti. All rights reserved.</small></span>
+    <footer role="contentinfo">
+      <span><small>&copy; 2025 Playboi Carti. Všetky práva vyhradené.</small></span>
     </footer>
   </body>
 </html>

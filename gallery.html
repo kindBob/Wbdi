@@ -1,62 +1,69 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <meta
       name="description"
-      content="Photo gallery of Playboi Carti, featuring live performances, photoshoots, and behind-the-scenes moments." />
-    <title>Playboi Carti - Gallery</title>
+      content="Fotogaléria Playboi Carti, obsahujúca živé vystúpenia, fotografie a momentky zo zákulisia." />
+    <title>Playboi Carti - Galéria</title>
   </head>
   <body>
-    <header>
+    <a href="#main-content" class="skip-to-main-content">Preskočiť na hlavný obsah</a>
+
+    <header role="banner">
       <h1>Playboi Carti</h1>
-      <nav>
+      <nav role="navigation" aria-label="Hlavná navigácia">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="bio.html">Biography</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="gallery.html" class="active">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Domov</a></li>
+          <li><a href="bio.html">Biografia</a></li>
+          <li><a href="music.html">Hudba</a></li>
+          <li><a href="gallery.html" class="active" aria-current="page">Galéria</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="accessibility.html">Prístupnosť</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="gallery-content">
-        <h2>Gallery</h2>
-        <div class="gallery-grid">
-          <figure>
+    <main id="main-content" role="main" tabindex="-1">
+      <section class="gallery-content" aria-labelledby="gallery-heading">
+        <h2 id="gallery-heading">Galéria</h2>
+        <div class="gallery-grid" role="list">
+          <figure role="listitem" tabindex="0">
             <img
               src="https://www.rollingstone.com/wp-content/uploads/2024/01/playboi-carti-album-rollout.jpg"
-              alt="Playboi Carti performing on stage" />
-            <figcaption>Playboi Carti performing live</figcaption>
+              alt="Playboi Carti vystupuje na pódiu v čiernom oblečení, s energickým výrazom a gestami rúk"
+              loading="lazy" />
+            <figcaption>Playboi Carti naživo</figcaption>
           </figure>
-          <figure>
+          <figure role="listitem" tabindex="0">
             <img
               src="https://media.gq.com/photos/5fb6c61804b839137672bd0d/1:1/w_2063,h_2063,c_limit/playboi-carti-gq-december-january-2021-02.jpg"
-              alt="Playboi Carti in a photoshoot" />
-            <figcaption>Stylish photoshoot</figcaption>
+              alt="Playboi Carti v módnej fotosekcii, oblečený v luxusnom oblečení s výrazným make-upom"
+              loading="lazy" />
+            <figcaption>Módna fotosekcia</figcaption>
           </figure>
-          <figure>
+          <figure role="listitem" tabindex="0">
             <img
               src="https://thefader-res.cloudinary.com/private_images/w_1440,c_limit,f_auto,q_auto:best/190424_PlayboiCarti_FaderCover_Shot_06_0115_f2_x_clv3wy/ann-demeulemeester-jacket.jpg"
-              alt="Playboi Carti portrait" />
-            <figcaption>Artist portrait</figcaption>
+              alt="Portrét Playboi Carti v čiernom kožuchu, s vážnym výrazom a intenzívnym pohľadom"
+              loading="lazy" />
+            <figcaption>Portrét umelca</figcaption>
           </figure>
-          <figure>
+          <figure role="listitem" tabindex="0">
             <img
               src="https://www.billboard.com/wp-content/uploads/2023/09/Playboi-Carti-wireless-fest-2023-billboard-1548.jpg"
-              alt="Playboi Carti in concert" />
-            <figcaption>Live performance</figcaption>
+              alt="Playboi Carti na koncerte, skáče na pódiu pred veľkým davom fanúšikov"
+              loading="lazy" />
+            <figcaption>Živé vystúpenie</figcaption>
           </figure>
         </div>
       </section>
     </main>
 
-    <footer>
-      <span><small>&copy; 2025 Playboi Carti. All rights reserved.</small></span>
+    <footer role="contentinfo">
+      <span><small>&copy; 2025 Playboi Carti. Všetky práva vyhradené.</small></span>
     </footer>
   </body>
 </html>

@@ -1,64 +1,67 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <meta
       name="description"
-      content="Discography and music information about Playboi Carti, including albums, singles, and notable tracks." />
-    <title>Playboi Carti - Music</title>
+      content="Diskografia a informácie o hudbe Playboi Carti, vrátane albumov, singlov a významných skladieb." />
+    <title>Playboi Carti - Hudba</title>
   </head>
   <body>
-    <header>
+    <a href="#main-content" class="skip-to-main-content">Preskočiť na hlavný obsah</a>
+
+    <header role="banner">
       <h1>Playboi Carti</h1>
-      <nav>
+      <nav role="navigation" aria-label="Hlavná navigácia">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="bio.html">Biography</a></li>
-          <li><a href="music.html" class="active">Music</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Domov</a></li>
+          <li><a href="bio.html">Biografia</a></li>
+          <li><a href="music.html" class="active" aria-current="page">Hudba</a></li>
+          <li><a href="gallery.html">Galéria</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="accessibility.html">Prístupnosť</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="music-content">
-        <h2>Music</h2>
+    <main id="main-content" role="main" tabindex="-1">
+      <section class="music-content" aria-labelledby="music-heading">
+        <h2 id="music-heading">Hudba</h2>
         <div class="music-intro">
           <p>
-            Carti burst onto the music scene with hit singles like "Magnolia" and the debut album
-            "Die Lit." His experimental style and unique vocal delivery have captivated a global
-            audience. With his follow-up album "Whole Lotta Red," he further solidified his status
-            as a pioneering artist in the trap and mumble rap genres.
+            Carti sa prepadol na hudobnú scénu s hitmi ako "Magnolia" a debutovým albumom "Die Lit."
+            Jeho experimentálny štýl a jedinečný spôsob spevu uchvátil globálne publikum. Svojím
+            nasledujúcim albumom "Whole Lotta Red" ďalej upevnil svoju pozíciu ako priekopníckeho
+            umelca v žánroch trap a mumble rap.
           </p>
         </div>
 
-        <div class="discography">
-          <h3>Discography</h3>
-          <table>
+        <div class="discography" aria-labelledby="discography-heading">
+          <h3 id="discography-heading">Diskografia</h3>
+          <table role="grid" aria-label="Diskografia Playboi Carti">
             <thead>
               <tr>
-                <th>Album</th>
-                <th>Release Date</th>
-                <th>Notable Tracks</th>
+                <th scope="col">Album</th>
+                <th scope="col">Dátum vydania</th>
+                <th scope="col">Významné skladby</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Die Lit</td>
-                <td>May 11, 2018</td>
+                <th scope="row">Die Lit</th>
+                <td>11. máj 2018</td>
                 <td>R.I.P., Shoota, Long Time</td>
               </tr>
               <tr>
-                <td>Whole Lotta Red</td>
-                <td>December 25, 2020</td>
+                <th scope="row">Whole Lotta Red</th>
+                <td>25. december 2020</td>
                 <td>Stop Breathing, Sky, Go2DaMoon</td>
               </tr>
               <tr>
-                <td>Playboi Carti</td>
-                <td>April 14, 2017</td>
+                <th scope="row">Playboi Carti</th>
+                <td>14. apríl 2017</td>
                 <td>Magnolia, wokeuplikethis*, Lookin</td>
               </tr>
             </tbody>
@@ -67,8 +70,8 @@
       </section>
     </main>
 
-    <footer>
-      <span><small>&copy; 2025 Playboi Carti. All rights reserved.</small></span>
+    <footer role="contentinfo">
+      <span><small>&copy; 2025 Playboi Carti. Všetky práva vyhradené.</small></span>
     </footer>
   </body>
 </html>

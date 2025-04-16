@@ -1,59 +1,62 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <meta
       name="description"
-      content="Page dedicated to Playboi Carti, the innovative American rapper known for his unique style and influential music." />
-    <title>Playboi Carti - Home</title>
+      content="Oficiálna stránka venovaná Playboi Carti, inovatívnemu americkému raperovi známemu svojim jedinečným štýlom a vplyvnou hudbou." />
+    <title>Playboi Carti - Domov</title>
   </head>
   <body>
-    <header>
+    <a href="#main-content" class="skip-to-main-content">Preskočiť na hlavný obsah</a>
+
+    <header role="banner">
       <h1>Playboi Carti</h1>
-      <nav>
+      <nav role="navigation" aria-label="Hlavná navigácia">
         <ul>
-          <li><a href="index.html" class="active">Home</a></li>
-          <li><a href="bio.html">Biography</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html" class="active" aria-current="page">Domov</a></li>
+          <li><a href="bio.html">Biografia</a></li>
+          <li><a href="music.html">Hudba</a></li>
+          <li><a href="gallery.html">Galéria</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="accessibility.html">Prístupnosť</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="hero">
-        <h2>Welcome to Playboi Carti's Official Website</h2>
+    <main id="main-content" role="main" tabindex="-1">
+      <section class="hero" aria-labelledby="hero-heading">
+        <h2 id="hero-heading">Vitajte na oficiálnej stránke Playboi Carti</h2>
         <p>
-          Discover the world of one of hip-hop's most innovative artists. From his groundbreaking
-          debut to his latest releases, explore the unique sound and style that has captivated
-          millions of fans worldwide.
+          Objavte svet jedného z najinovatívnejších umelcov hip-hopu. Od jeho prelomového debutu až
+          po najnovšie vydania, preskúmajte jedinečný zvuk a štýl, ktorý uchvátil milióny fanúšikov
+          po celom svete.
         </p>
       </section>
 
-      <section class="featured-content">
-        <h2>Latest Updates</h2>
-        <div class="featured-grid">
-          <div class="featured-item">
-            <h3>New Album</h3>
-            <p>Stay tuned for Playboi Carti's upcoming album release.</p>
+      <section class="featured-content" aria-labelledby="featured-heading">
+        <h2 id="featured-heading">Najnovšie aktualizácie</h2>
+        <div class="featured-grid" role="list">
+          <div class="featured-item" role="listitem">
+            <h3>Nový album</h3>
+            <p>Sledujte pripravované vydanie nového albumu Playboi Carti.</p>
           </div>
-          <div class="featured-item">
-            <h3>Tour Dates</h3>
-            <p>Check out upcoming tour dates and concert information.</p>
+          <div class="featured-item" role="listitem">
+            <h3>Termíny turné</h3>
+            <p>Pozrite si nadchádzajúce termíny turné a informácie o koncertoch.</p>
           </div>
-          <div class="featured-item">
-            <h3>Latest News</h3>
-            <p>Get the latest updates about Playboi Carti's career and projects.</p>
+          <div class="featured-item" role="listitem">
+            <h3>Najnovšie správy</h3>
+            <p>Získajte najnovšie informácie o kariére a projektoch Playboi Carti.</p>
           </div>
         </div>
       </section>
     </main>
 
-    <footer>
-      <span><small>&copy; 2025 Playboi Carti. All rights reserved.</small></span>
+    <footer role="contentinfo">
+      <span><small>&copy; 2025 Playboi Carti. Všetky práva vyhradené.</small></span>
     </footer>
   </body>
 </html>

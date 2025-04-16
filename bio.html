@@ -1,61 +1,65 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./styles.css" />
     <meta
       name="description"
-      content="Biography of Playboi Carti, the innovative American rapper known for his unique style and influential music." />
-    <title>Playboi Carti - Biography</title>
+      content="Biografia Playboi Carti, inovatívneho amerického rapera známeho svojim jedinečným štýlom a vplyvnou hudbou." />
+    <title>Playboi Carti - Biografia</title>
   </head>
   <body>
-    <header>
+    <a href="#main-content" class="skip-to-main-content">Preskočiť na hlavný obsah</a>
+
+    <header role="banner">
       <h1>Playboi Carti</h1>
-      <nav>
+      <nav role="navigation" aria-label="Hlavná navigácia">
         <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="bio.html" class="active">Biography</a></li>
-          <li><a href="music.html">Music</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li><a href="index.html">Domov</a></li>
+          <li><a href="bio.html" class="active" aria-current="page">Biografia</a></li>
+          <li><a href="music.html">Hudba</a></li>
+          <li><a href="gallery.html">Galéria</a></li>
+          <li><a href="contact.html">Kontakt</a></li>
+          <li><a href="accessibility.html">Prístupnosť</a></li>
         </ul>
       </nav>
     </header>
 
-    <main>
-      <section class="bio-content">
-        <h2>Biography</h2>
+    <main id="main-content" role="main" tabindex="-1">
+      <article class="bio-content" aria-labelledby="bio-heading">
+        <h2 id="bio-heading">Biografia</h2>
         <div class="bio-grid">
-          <div class="bio-text">
+          <div class="bio-text" role="article">
             <p>
-              Playboi Carti, born Jordan Terrell Carter, is an American rapper, singer, and record
-              producer known for his distinct sound and innovative approach to hip-hop. Hailing from
-              Atlanta, Georgia, Carti has rapidly gained recognition for his minimalist beats,
-              catchy hooks, and a style that pushes the boundaries of conventional rap.
+              Playboi Carti, vlastným menom Jordan Terrell Carter, je americký raper, spevák a
+              hudobný producent známy svojim výrazným zvukom a inovatívnym prístupom k hip-hopu.
+              Pochádzajúc z Atlanty v Georgii, Carti si rýchlo získal uznanie vďaka minimalistickým
+              beatom, chytľavým melódiám a štýlu, ktorý posúva hranice konvenčného rapu.
             </p>
             <p>
-              Growing up in Atlanta, Carti was influenced by the city's rich hip-hop culture. His
-              early exposure to trap music and the city's vibrant music scene helped shape his
-              unique artistic direction.
+              Vyrástol v Atlante, kde bol ovplyvnený bohatou hip-hopovou kultúrou mesta. Jeho skoré
+              oboznámenie sa s trap hudbou a živou hudobnou scénou mesta pomohlo formovať jeho
+              jedinečný umelecký smer.
             </p>
             <p>
-              Carti's rise to fame began with his self-titled debut mixtape in 2017, which featured
-              the breakout hit "Magnolia." His innovative approach to music production and vocal
-              delivery quickly set him apart from his contemporaries.
+              Cartiho vzostup k sláve začal jeho samostatným debutovým mixtape v roku 2017, ktorý
+              obsahoval prelomový hit "Magnolia." Jeho inovatívny prístup k hudobnej produkcii a
+              spôsobu spevu ho rýchlo odlíšil od jeho súčasníkov.
             </p>
           </div>
-          <div class="bio-image">
+          <div class="bio-image" role="complementary">
             <img
               src="https://media.gq.com/photos/5fb6c61804b839137672bd0d/1:1/w_2063,h_2063,c_limit/playboi-carti-gq-december-january-2021-02.jpg"
-              alt="Playboi Carti portrait" />
+              alt="Portrét Playboi Carti v módnom oblečení, s výrazným make-upom a intenzívnym pohľadom"
+              loading="lazy" />
           </div>
         </div>
-      </section>
+      </article>
     </main>
 
-    <footer>
-      <span><small>&copy; 2025 Playboi Carti. All rights reserved.</small></span>
+    <footer role="contentinfo">
+      <span><small>&copy; 2025 Playboi Carti. Všetky práva vyhradené.</small></span>
     </footer>
   </body>
 </html>
